@@ -18,6 +18,8 @@ $params = htmlspecialchars(urldecode(stripslashes($_REQUEST['params'])));
 
 $result = $api->$method($api_key, $params);
 
+
+//вывод результата api
 echo json_encode($result);
 
 
