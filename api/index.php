@@ -2,6 +2,7 @@
 //Точка входа в приложение
 $config = [];
 include_once './core/Api.php';
+include_once './include/config.php';
 use core\Api;
 
 $api = new Api($config);
@@ -18,6 +19,6 @@ $params = htmlspecialchars(urldecode(stripslashes($_REQUEST['params'])));
 
 $result = $api->$method($api_key, $params);
 
+
+//вывод результата api
 echo json_encode($result);
-
-
